@@ -25,11 +25,11 @@ ubuntu_codename=`. /etc/os-release; echo ${UBUNTU_CODENAME/*, /}`
 # ubuntu_codename is xenial for L4T 28.X (Ubuntu 16.04)
 # Patching kernel for RealSense devices
 echo -e "\e[32mApplying realsense-uvc patch\e[0m"
-patch -p1 < ${LIBREALSENSE_DIR}/scripts/realsense-camera-formats_ubuntu-${ubuntu_codename}-${kernel_branch}.patch 
+patch -p1 < ${LIBREALSENSE_DIR}/scripts/realsense-camera-formats_ubuntu-xenial.patch 
 echo -e "\e[32mApplying realsense-metadata patch\e[0m"
-patch -p1 < ${LIBREALSENSE_DIR}/scripts/realsense-metadata-ubuntu-${ubuntu_codename}-${kernel_branch}.patch
+patch -p1 < ${LIBREALSENSE_DIR}/scripts/realsense-metadata-ubuntu-xenial-joule.patch
 echo -e "\e[32mApplying realsense-hid patch\e[0m"
-patch -p1 < ${LIBREALSENSE_DIR}/scripts/realsense-hid-ubuntu-${ubuntu_codename}-${kernel_branch}.patch
+patch -p1 < ${LIBREALSENSE_DIR}/scripts/realsense-hid-ubuntu-xenial-joule.patch
 echo -e "\e[32mpowerlinefrequency-control-fix patch\e[0m"
 patch -p1 < ${LIBREALSENSE_DIR}/scripts/realsense-powerlinefrequency-control-fix.patch
 
